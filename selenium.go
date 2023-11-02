@@ -44,13 +44,17 @@ func SaveSnapshot(wd selenium.WebDriver, name string) error {
 	if err != nil {
 		return err
 	}
-	currentTimestamp := go_time.TimeInstance.CurrentTimestamp(go_time.TimeUnit_SECOND)
-	dir := fmt.Sprintf("./snapshot_%d", currentTimestamp)
+	dir := fmt.Sprintf("./snapshot_%s", name)
 	err = go_file.FileInstance.AssertPathExist(dir)
 	if err != nil {
 		return err
 	}
-	out, err := os.Create(fmt.Sprintf("%s/%d_%s.png", dir, currentTimestamp, name))
+	out, err := os.Create(fmt.Sprintf(
+		"%s/%d_%s.png",
+		dir,
+		go_time.TimeInstance.CurrentTimestamp(go_time.TimeUnit_SECOND),
+		name,
+	))
 	if err != nil {
 		return err
 	}

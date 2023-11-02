@@ -1,4 +1,4 @@
-package selenium
+package go_selenium
 
 import (
 	"bytes"

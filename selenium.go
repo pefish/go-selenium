@@ -19,7 +19,7 @@ func GetChild(ele selenium.WebElement, index int) (selenium.WebElement, error) {
 	return children[index], nil
 }
 
-func ScrollToBottom(wd selenium.WebDriver, index int) error {
+func ScrollToBottom(wd selenium.WebDriver) error {
 	_, err := wd.ExecuteScript(`window.scrollTo(0, document.body.scrollHeight)`, nil)
 	if err != nil {
 		return err

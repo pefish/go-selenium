@@ -9,6 +9,7 @@ import (
 	"image"
 	"image/png"
 	"os"
+	"time"
 )
 
 func GetChild(ele selenium.WebElement, index int) (selenium.WebElement, error) {
@@ -21,6 +22,26 @@ func GetChild(ele selenium.WebElement, index int) (selenium.WebElement, error) {
 
 func ScrollToBottom(wd selenium.WebDriver) error {
 	_, err := wd.ExecuteScript(`window.scrollTo(0, document.body.scrollHeight)`, nil)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func WaitDocumentReady(wd selenium.WebDriver, moreCondition func(wd selenium.WebDriver) (bool, error)) error {
+	err := wd.WaitWithTimeoutAndInterval(func(wd selenium.WebDriver) (bool, error) {
+		result, err := wd.ExecuteScript("return document.readyState", nil)
+		if err != nil {
+			return false, err
+		}
+		if result.(string) != "complete" {
+			return false, nil
+		}
+		if moreCondition != nil {
+			return moreCondition(wd)
+		}
+		return true, nil
+	}, 10*time.Second, time.Second)
 	if err != nil {
 		return err
 	}

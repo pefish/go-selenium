@@ -19,6 +19,14 @@ func GetChild(ele selenium.WebElement, index int) (selenium.WebElement, error) {
 	return children[index], nil
 }
 
+func ScrollToBottom(wd selenium.WebDriver, index int) error {
+	_, err := wd.ExecuteScript(`window.scrollTo(0, document.body.scrollHeight)`, nil)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func GetChildByPath(ele selenium.WebElement, indexs []int) (selenium.WebElement, error) {
 	result := ele
 	for _, index := range indexs {

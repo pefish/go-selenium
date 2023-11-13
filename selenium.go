@@ -5,6 +5,7 @@ import (
 	"fmt"
 	go_file "github.com/pefish/go-file"
 	go_time "github.com/pefish/go-time"
+	"github.com/pkg/errors"
 	"github.com/tebeka/selenium"
 	"image"
 	"image/png"
@@ -48,15 +49,18 @@ func WaitDocumentReady(wd selenium.WebDriver, moreCondition func(wd selenium.Web
 	return nil
 }
 
-func GetChildByPath(ele selenium.WebElement, indexs []int) (selenium.WebElement, error) {
+func GetChildByPath(ele selenium.WebElement, indexes []int) (selenium.WebElement, error) {
 	result := ele
-	for _, index := range indexs {
+	for i, index := range indexes {
 		children, err := result.FindElements(selenium.ByXPATH, "*")
 		if err != nil {
 			return nil, err
 		}
 		if index < 0 {
 			index += len(children)
+		}
+		if index >= len(children) {
+			return nil, errors.Errorf("Not found on index %d", i)
 		}
 		result = children[index]
 	}

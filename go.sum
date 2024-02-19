@@ -31,10 +31,16 @@ github.com/hashicorp/golang-lru v0.5.1/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/pefish/go-error v1.0.7 h1:bSvBtQ6PGYxtLLIPDbxh7X7XSTCELc0C0KwiEYjRwy4=
 github.com/pefish/go-error v1.0.7/go.mod h1:DrrC/osWSJTTaH/txuos6t1YIitr1Y2GGhnxzfZ7VAI=
+github.com/pefish/go-error v1.0.8 h1:IC1UCHkeFvtTpvDfVxBNEoA4yQNk4VKV+mhO3JW5Nxk=
+github.com/pefish/go-error v1.0.8/go.mod h1:CGliu23YIh+xakY+vs6xWLoaXOMAq+2qT87dVN3ZlzM=
 github.com/pefish/go-file v0.2.1 h1:9+e3zyHShZ2GmK5Ll0lbc9JmKlQtKG9BsqtqpdmxFtY=
 github.com/pefish/go-file v0.2.1/go.mod h1:/HCRD6vne8P/4kbZvnHPeqeiJ8JKcJoFjXTTiScG5cY=
+github.com/pefish/go-file v0.2.3 h1:glBhRD2Gn2YZB6Krw3I8rlkcDhf/BlSDA6PN8FIU0sc=
+github.com/pefish/go-file v0.2.3/go.mod h1:SsTQNSzKWUrpHJVZD1wyOjRAiXx4cIUgjSYMTHD1zxI=
 github.com/pefish/go-time v0.2.1 h1:SlpsTA4e/aNO8TDzvI7kFL5y0zwOct/W+woW2R3Ik/w=
 github.com/pefish/go-time v0.2.1/go.mod h1:5BGWpLZXOu3zNQslWrMFwTJHlPaMr+cjc4fxOu6c27M=
+github.com/pefish/go-time v0.3.2 h1:MpFPO2bt9trBQSpa1qBNZYvFVfFaeqE3dB4lAIGpUdk=
+github.com/pefish/go-time v0.3.2/go.mod h1:QO6RKtlUBbbOGEoJEZA/+vmQvfBdavAMP09ROZhTV0Q=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/tebeka/selenium v0.9.9 h1:cNziB+etNgyH/7KlNI7RMC1ua5aH1+5wUlFQyzeMh+w=

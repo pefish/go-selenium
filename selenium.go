@@ -85,7 +85,7 @@ func SaveSnapshot(wd selenium.WebDriver, name string) error {
 	out, err := os.Create(fmt.Sprintf(
 		"%s/%d_%s.png",
 		dir,
-		go_time.TimeInstance.CurrentTimestamp(go_time.TimeUnit_SECOND),
+		go_time.TimeInstance.CurrentTimestamp(),
 		name,
 	))
 	if err != nil {

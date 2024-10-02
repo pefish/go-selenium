@@ -78,7 +78,7 @@ func SaveSnapshot(wd selenium.WebDriver, name string) error {
 		return err
 	}
 	dir := fmt.Sprintf("./snapshot_%s", name)
-	err = go_file.FileInstance.AssertPathExist(dir)
+	err = go_file.AssertPathExist(dir)
 	if err != nil {
 		return err
 	}

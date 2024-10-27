@@ -41,6 +41,8 @@ github.com/pefish/go-file v0.2.9/go.mod h1:sT3fZdxwnAqZiwvoTO5BqGWoGcRjI1Vss401/
 github.com/pefish/go-test v0.0.4 h1:s1RmZWe91K1MtENJUcl7CjGUFK/TmleZ5h3OkHq/BTI=
 github.com/pefish/go-time v0.3.3 h1:9hEatuz3X+h2hGKzxFYhxiMka3QJvPpbeuiWx7q5gUY=
 github.com/pefish/go-time v0.3.3/go.mod h1:QO6RKtlUBbbOGEoJEZA/+vmQvfBdavAMP09ROZhTV0Q=
+github.com/pefish/go-time v0.3.4 h1:8vLndC760mB2ki+fxYrK/ShvM7iP83wJuyPgPVlw1CA=
+github.com/pefish/go-time v0.3.4/go.mod h1:QO6RKtlUBbbOGEoJEZA/+vmQvfBdavAMP09ROZhTV0Q=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/tebeka/selenium v0.9.9 h1:cNziB+etNgyH/7KlNI7RMC1ua5aH1+5wUlFQyzeMh+w=

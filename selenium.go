@@ -3,14 +3,15 @@ package go_selenium
 import (
 	"bytes"
 	"fmt"
-	go_file "github.com/pefish/go-file"
-	go_time "github.com/pefish/go-time"
-	"github.com/pkg/errors"
-	"github.com/tebeka/selenium"
 	"image"
 	"image/png"
 	"os"
 	"time"
+
+	go_file "github.com/pefish/go-file"
+	go_time "github.com/pefish/go-time"
+	"github.com/pkg/errors"
+	"github.com/tebeka/selenium"
 )
 
 func GetChild(ele selenium.WebElement, index int) (selenium.WebElement, error) {
@@ -85,7 +86,7 @@ func SaveSnapshot(wd selenium.WebDriver, name string) error {
 	out, err := os.Create(fmt.Sprintf(
 		"%s/%d_%s.png",
 		dir,
-		go_time.TimeInstance.CurrentTimestamp(),
+		go_time.CurrentTimestamp(),
 		name,
 	))
 	if err != nil {
